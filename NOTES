@@ -1,0 +1,18 @@
+
+for static plugins, which I disabled all (at least I hope so) follow
+https://redmine.lighttpd.net/boards/3/topics/5912
+
+LIGHTTPD_STATIC=yes ./configure -C --enable-static=yes --disable-lfs --disable-ipv6 --without-libev --without-mysql --without-pgsql --without-dbi --without-sasl --without-ldap --without-pam --without-attr --without-valgrind --without-krb5 --without-openssl  --without-wolfssl --without-pcre --without-zlib --without-bzip2 --without-fam --without-webdav_props --without-libxml --without-sqlite --without-webdav_locks --without-gdbm --without-geoip --without-maxminddb --without-memcached --without-lua 
+
+
+
+Normal installation (minimal size)
+
+
+
+./configure --enable-static --disable-shared --disable-lfs --disable-ipv6 --without-libev --without-mysql --without-pgsql --without-dbi --without-sasl --without-ldap --without-pam --without-attr --without-valgrind --without-krb5 --without-openssl  --without-wolfssl --without-pcre --without-zlib --without-bzip2 --without-fam --without-webdav_props --without-libxml --without-sqlite --without-webdav_locks --without-gdbm --without-geoip --without-maxminddb --without-memcached --without-lua 
+
+make
+
+strip -o lighttpd-strip --strip-unneeded --strip-debug lighttpd
+
