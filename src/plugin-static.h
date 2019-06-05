@@ -1,0 +1,5 @@
+PLUGIN_INIT(mod_indexfile)
+PLUGIN_INIT(mod_setenv)
+PLUGIN_INIT(mod_staticfile)
+PLUGIN_INIT(mod_status)
+PLUGIN_INIT(mod_userdir)
